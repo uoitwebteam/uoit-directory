@@ -55,27 +55,26 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
   $errorMessages .= "Invalid email format. ";
 }
 
-if (!preg_match('/^[0-9]{10}+$/', $phone)) {
+if (isset($phone) && !preg_match('/^[0-9]{10}+$/', $phone)) {
   $errorMessages .= "Invalid phone format. ";
 }
 
-if (!preg_match('/^[0-9]{4}+$/', $extension)) {
+if (isset($extension) && !preg_match('/^[0-9]{4}+$/', $extension)) {
   $errorMessages .= "Invalid extension format. ";
 }
 
-if (!preg_match('/^[0-9]{9}+$/', $bannerId)) {
+if (isset($bannerId) && !preg_match('/^[0-9]{9}+$/', $bannerId)) {
   $errorMessages .= "Invalid bannerId format. ";
 }
 
+// AFTER PASSING THE VALIDATION TEST, SENT OUT THE EMAIL
+foreach ($_POST as $key => $value) {
+  $tbody .= $value ? "<tr><td><strong>$key:</strong></td><td>$value</td></tr>" : "";
+}
 
 if (!empty($errorMessages)) {
-  die(json_encode(array('success' => false, 'message' => $mail->$errorMessages)));
+  die(json_encode(array('success' => false, 'message' => $errorMessages)));
 } else {
-  // AFTER PASSING THE VALIDATION TEST, SENT OUT THE EMAIL
-  foreach ($_POST as $key => $value) {
-    $tbody .= $value ? "<tr><td><strong>$key:</strong></td><td>$value</td></tr>" : "";
-  }
-
   $mail->Host = 'smtp-mail.outlook.com';                // Specify main and backup SMTP servers
   $mail->SMTPAuth = true;                               // Enable SMTP authentic
   $mail->Username = '';                                 // SMTP username
