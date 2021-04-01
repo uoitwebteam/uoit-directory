@@ -1,5 +1,6 @@
 import angular from 'angular';
 import 'angular-sanitize';
+import 'angular-recaptcha';
 
 import {
   SearchService
@@ -44,7 +45,7 @@ import {
   CONTACTS_LIST
 } from './components/contacts';
 
-angular.module('uoitDirectory', ['ngSanitize'])
+angular.module('uoitDirectory', ['vcRecaptcha', 'ngSanitize'])
   .constant('SORT_OPTIONS', SORT_OPTIONS)
   .constant('CONTACTS_LIST', CONTACTS_LIST)
   .service('SearchService', SearchService)
