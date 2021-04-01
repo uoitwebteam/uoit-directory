@@ -52,7 +52,8 @@ export const SearchComponent = {
           building: null,
           office: null,
           extension: null,
-          email: null
+          email: null,
+          myCaptchaResponse: null
         },
         formStatus: {
           success: null,
@@ -226,10 +227,12 @@ export const SearchComponent = {
       formData,
       form
     }) {
+      const myCaptchaResponse = formData.myCaptchaResponse;
       const data = this.$httpParamSerializerJQLike(formData);
       const headers = {
         'Content-Type': 'application/x-www-form-urlencoded'
       };
+      console.log(`${myCaptchaResponse}`);
       this.$http({
           method: 'POST',
           url: 'mail.php',

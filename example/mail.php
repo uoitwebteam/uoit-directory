@@ -21,6 +21,7 @@ $phone      = $_POST['phone'];      // required
 $subject      = $_POST['subject'];      // required
 $message      = $_POST['message'];      // required
 $recipient    = $_POST['recipient'];      // required
+$captcha      = $_POST['myCaptchaResponse'];
 
 //ADD EMAIL VARIABLES DEFINITIONS
 $errorMessages = "";
@@ -67,9 +68,23 @@ if (isset($bannerId) && !preg_match('/^[0-9]{9}+$/', $bannerId)) {
   $errorMessages .= "Invalid bannerId format. ";
 }
 
+//RECAPTCHA VALIDATION
+if (!$captcha) {
+  $errorMessages .= "Please check the the captcha form.";
+}
+$secretKey = "6LfvWZgaAAAAAC8fFu5nY5yHIhKVzqJr_rABqoQY";
+$ip = $_SERVER['REMOTE_ADDR'];
+$response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=" . $secretKey . "&response=" . $captcha . "&remoteip=" . $ip);
+$responseKeys = json_decode($response, true);
+if (intval($responseKeys["success"]) !== 1) {
+  $errorMessages .=  "You are spammer ! Get the @$%K out!";
+}
+
 // AFTER PASSING THE VALIDATION TEST, SENT OUT THE EMAIL
 foreach ($_POST as $key => $value) {
-  $tbody .= $value ? "<tr><td><strong>$key:</strong></td><td>$value</td></tr>" : "";
+  if ($key != 'myCaptchaResponse') {
+    $tbody .= $value ? "<tr><td><strong>$key:</strong></td><td>$value</td></tr>" : "";
+  }
 }
 
 if (!empty($errorMessages)) {
