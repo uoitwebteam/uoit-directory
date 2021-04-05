@@ -76,7 +76,7 @@
     <div class="xxsmall-12 medium-6 columns">
       <label>Extension:
         <span class="red"> *</span>
-        <input type="text" name="extension" ng-model="$ctrl.formData.extension" required ng-pattern="'[0-9]+'" />
+        <input type="text" name="extension" ng-model="$ctrl.formData.extension" required ng-pattern="/^x?[0-9]+$/" />
       </label>
     </div>
     <div class="xxsmall-12 medium-6 columns">
@@ -86,6 +86,8 @@
       </label>
     </div>
   </div>
+  <div vc-recaptcha key="'6LfvWZgaAAAAABF6D1BUBQCQQAZWzQD9ozEOwIT3'" ng-model="$ctrl.formData.myCaptchaResponse"
+    size="normal"></div>
   <fieldset class="large-6 columns">
     <button class="button" type="submit" value="Submit" role="button" ng-disabled="$ctrl.form.$invalid">Submit</button>
   </fieldset>

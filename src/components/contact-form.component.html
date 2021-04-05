@@ -32,10 +32,18 @@
     <div class="xxsmall-12 medium-6 columns">
       <label>Phone:
         <span class="red"> *</span>
-        <input type="text" name="phone" ng-model="$ctrl.formData.phone" required ng-pattern="'[0-9]+'" />
+        <input type="text" name="phone" ng-model="$ctrl.formData.phone" required
+          ng-pattern="/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/" />
       </label>
     </div>
     <div class="xxsmall-12 medium-6 columns">
+      <label>Extension:
+        <input type="text" name="extension" ng-model="$ctrl.formData.extension" ng-pattern="/^x?[0-9]+$/" />
+      </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="xxsmall-12 medium-12 columns">
       <label>Email:
         <span class="red"> *</span>
         <input type="email" name="email" ng-model="$ctrl.formData.email" required />
@@ -57,6 +65,10 @@
         <textarea type="text" name="message" ng-model="$ctrl.formData.message" cols="30" rows="10" required></textarea>
       </label>
     </div>
+  </div>
+
+  <div vc-recaptcha key="'6LfvWZgaAAAAABF6D1BUBQCQQAZWzQD9ozEOwIT3'" ng-model="$ctrl.formData.myCaptchaResponse"
+    size="normal">
   </div>
   <fieldset class="large-6 columns">
     <button class="button" type="submit" value="Submit" role="button" ng-disabled="$ctrl.form.$invalid">Submit</button>
