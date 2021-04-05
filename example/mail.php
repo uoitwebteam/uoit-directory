@@ -72,10 +72,12 @@ if (isset($bannerId) && !preg_match('/^[0-9]{9}+$/', $bannerId)) {
 if (!$captcha) {
   $errorMessages .= "Please fill out the the Captcha form.";
 }
+
 $secretKey = "6LfvWZgaAAAAAC8fFu5nY5yHIhKVzqJr_rABqoQY";
 $ip = $_SERVER['REMOTE_ADDR'];
 $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=" . $secretKey . "&response=" . $captcha . "&remoteip=" . $ip);
 $responseKeys = json_decode($response, true);
+
 if (intval($responseKeys["success"]) !== 1) {
   $errorMessages .=  "Captcha failed; please try again.";
 }
