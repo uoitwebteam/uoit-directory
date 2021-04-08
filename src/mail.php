@@ -56,7 +56,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
   $errorMessages .= "Invalid email format. ";
 }
 
-if (isset($phone) && !preg_match('/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/', $phone)) {
+if (isset($phone) && !preg_match('/^[0-9]{10}$/', $phone)) {
   $errorMessages .= "Invalid phone format. ";
 }
 
