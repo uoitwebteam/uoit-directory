@@ -60,7 +60,7 @@ if (isset($phone) && !preg_match('/^[0-9]{10}$/', $phone)) {
   $errorMessages .= "Invalid phone format. ";
 }
 
-if (isset($extension) && !preg_match('/^x?[0-9]+$/', $extension)) {
+if ($extension != '' && !preg_match('/^x?[0-9]+$/', $extension)) {
   $errorMessages .= "Invalid extension format. ";
 }
 
