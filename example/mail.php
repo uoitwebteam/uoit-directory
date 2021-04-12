@@ -60,7 +60,7 @@ if (isset($phone) && !preg_match('/^[0-9]{10}$/', $phone)) {
   $errorMessages .= "Invalid phone format. ";
 }
 
-if (isset($extension) && !preg_match('/^x?[0-9]+$/', $extension)) {
+if ($extension != '' && !preg_match('/^x?[0-9]+$/', $extension)) {
   $errorMessages .= "Invalid extension format. ";
 }
 
@@ -70,14 +70,14 @@ if (isset($bannerId) && !preg_match('/^[0-9]{9}+$/', $bannerId)) {
 
 //RECAPTCHA VALIDATION
 if (!$captcha) {
-  $errorMessages .= "Please check the the captcha form.";
+  $errorMessages .= "Please fill out the Captcha form.";
 }
 $secretKey = "6LfvWZgaAAAAAC8fFu5nY5yHIhKVzqJr_rABqoQY";
 $ip = $_SERVER['REMOTE_ADDR'];
 $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=" . $secretKey . "&response=" . $captcha . "&remoteip=" . $ip);
 $responseKeys = json_decode($response, true);
 if (intval($responseKeys["success"]) !== 1) {
-  $errorMessages .=  "You are spammer ! Get the @$%K out!";
+  $errorMessages .=  "Captcha failed; please try again.";
 }
 
 // AFTER PASSING THE VALIDATION TEST, SENT OUT THE EMAIL
