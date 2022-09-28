@@ -7,7 +7,7 @@ export const SearchService = function SearchService($http, $httpParamSerializer,
   const API_V2 = 2;
   const API_V3 = 3;
 
-  const replaceText = item => item.replace(/-|UOIT|/g, '').replace(/&/g, 'and').replace(/-| OT|/g, '');
+  const replaceText = item => item.replace(/-|UOIT|/g, '').replace(/&/g, 'and').replace(/-| OT|/g, '').replace(/OT|/g, '').replace(/OT |/g, '');
   const processList = items =>
     items.map(item => {
       if (item.department) {
