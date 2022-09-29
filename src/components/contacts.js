@@ -98,8 +98,8 @@ export const CONTACTS_LIST = [{
     phone: '905.721.3266',
     email: 'studentaccessibility@ontariotechu.ca'
 	}, {
-		name: 'Student Association',
-		phone: '905.721.0457'
+		name: 'Ontario Tech Student Union',
+		phone: '905.721.8668'
 	}, {
 		name: 'Student Awards and Financial Aid (SAFA)',
 		phone: '905.721.3143'
