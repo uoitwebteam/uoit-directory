@@ -1,4 +1,5 @@
 <?php
+
 error_reporting(0);
 date_default_timezone_set('EST/UTC');
 
@@ -56,11 +57,11 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
   $errorMessages .= "Invalid email format. ";
 }
 
-if (isset($phone) && !preg_match('/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/', $phone)) {
-  $errorMessages .= "Invalid phone format. ";
-}
+// if (isset($phone) && !preg_match('/^[0-9]{10}$/', $phone)) {
+//   $errorMessages .= "Invalid phone format. ";
+// }
 
-if (isset($extension) && !preg_match('/^x?[0-9]+$/', $extension)) {
+if ($extension != '' && !preg_match('/^x?[0-9]+$/', $extension)) {
   $errorMessages .= "Invalid extension format. ";
 }
 
@@ -70,7 +71,7 @@ if (isset($bannerId) && !preg_match('/^[0-9]{9}+$/', $bannerId)) {
 
 //RECAPTCHA VALIDATION
 if (!$captcha) {
-  $errorMessages .= "Please fill out the the captcha form.";
+  $errorMessages .= "Please fill out the Captcha form.";
 }
 $secretKey = "6LfvWZgaAAAAAC8fFu5nY5yHIhKVzqJr_rABqoQY";
 $ip = $_SERVER['REMOTE_ADDR'];
@@ -90,12 +91,12 @@ foreach ($_POST as $key => $value) {
 if (!empty($errorMessages)) {
   die(json_encode(array('success' => false, 'message' => $errorMessages)));
 } else {
-  $mail->Host = 'smtp-mail.outlook.com';                // Specify main and backup SMTP servers
-  $mail->SMTPAuth = true;                               // Enable SMTP authentic
-  $mail->Username = '';                                 // SMTP username
-  $mail->Password = '';                                 // SMTP password
-  $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-  $mail->Port = 587;                                     // TCP port to connect to
+  // $mail->Host = 'smtp-mail.outlook.com';                // Specify main and backup SMTP servers
+  // $mail->SMTPAuth = true;                               // Enable SMTP authentic
+  // $mail->Username = '';                                 // SMTP username
+  // $mail->Password = '';                                 // SMTP password
+  // $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+  // $mail->Port = 587;                                     // TCP port to connect to
 
   $mail->setFrom($email);
   $mail->isHTML(true);                                  // Set email format to HTML
@@ -106,6 +107,7 @@ if (!empty($errorMessages)) {
   $mail->Body  = "$emailMessage<table><tbody>$tbody</tbody></table>$signOff";
 
   if (!$mail->send()) {
+    error_log($mail->ErrorInfo);
     header('HTTP/1.1 400 Bad Request');
     header('Content-Type: application/json; charset=UTF-8');
     die(json_encode(array('success' => false, 'message' => $mail->ErrorInfo)));
