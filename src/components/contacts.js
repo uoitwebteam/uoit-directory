@@ -2,7 +2,7 @@ export const CONTACTS_LIST = [{
 	category: 'Campus services',
 	items: [{
     name: 'Admissions',
-    email: 'futurestudents@ontariotechu.ca'
+    email: 'admissions@ontariotechu.ca'
   }, {
     name: 'Advancement',
     email: 'advancement@ontariotechu.ca'
@@ -127,7 +127,7 @@ export const CONTACTS_LIST = [{
 		name: 'Faculty of Business and Information Technology',
 		phone: '905.721.8668 ext. 2830'
 	}, {
-		name: 'Faculty of Education',
+		name: 'Mitch and Leslie Frazer Faculty of Education',
 		phone: '905.721.8668 ext. 3181'
 	}, {
 		name: 'Faculty of Energy Systems and Nuclear Science',
