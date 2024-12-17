@@ -11,7 +11,7 @@ export const CONTACTS_LIST = [{
     email: 'alumni@ontariotechu.ca'
   }, {
 		name: 'Bookstore',
-    phone: '905.721.3026',
+    phone: '905-721-8668 ext. 5413',
     email: 'ontariotechu@bkstr.com'
 	}, {
 		name: 'Campus Fieldhouse',
@@ -99,10 +99,10 @@ export const CONTACTS_LIST = [{
     email: 'studentaccessibility@ontariotechu.ca'
 	}, {
 		name: 'Ontario Tech Student Union',
-		phone: '905.721.8668'
+		email: 'otsu@ontariotechu.ca'
 	}, {
 		name: 'Student Awards and Financial Aid (SAFA)',
-		phone: '905.721.3143'
+		phone: '905.721.3190'
 	}, {
 		name: 'Student Engagement and Equity',
 		phone: '905.721.8668 ext. 3837'
@@ -112,8 +112,7 @@ export const CONTACTS_LIST = [{
     email: 'studentlearning@ontariotechu.ca'
 	}, {
 		name: 'Student Life',
-    phone: '905.721.8668 ext. 2129',
-    email: 'studentlife@ontariotechu.ca'
+        email: 'studentlife@ontariotechu.ca'
 	}, {
 		name: 'Student Mental Health Services',
 		phone: '905.721.3392'
@@ -130,14 +129,11 @@ export const CONTACTS_LIST = [{
 		name: 'Mitch and Leslie Frazer Faculty of Education',
 		phone: '905.721.8668 ext. 3181'
 	}, {
-		name: 'Faculty of Energy Systems and Nuclear Science',
-		phone: '905.721.8668 ext. 5511'
-	}, {
 		name: 'Faculty of Engineering and Applied Science',
 		phone: '905.721.8668 ext. 2988'
 	}, {
 		name: 'Faculty of Health Sciences',
-		phone: '905.721.8668 ext. 3166'
+		phone: '905.721.8668 ext. 6239'
 	}, {
 		name: 'Faculty of Science',
 		phone: '905.721.8668 ext. 3050'

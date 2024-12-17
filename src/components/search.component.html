@@ -54,8 +54,8 @@
           class="xxsmall-6 large-6 medium-6 columns contact-card{{ ::(contact.class ? ' contact-faculty ' + contact.class : '') }}">
           <p class="contact-name"><strong>{{ ::contact.name }}</strong></p>
           <p class="contact-phone" ng-if="contact.phone"><span class="icon_phone"></span> &nbsp;<a
-              href="tel:{{ ::contact.phone | telLink }}"
-              title="Place call to {{ ::contact.phone }}">{{ ::contact.phone }}</a></p>
+              href="tel:{{ ::contact.phone | telLink }}" title="Place call to {{ ::contact.phone }}">{{ ::contact.phone
+              }}</a></p>
           <p class="contact-email" ng-if="contact.email"><span class="icon_mail"></span> &nbsp;<a
               href="mailto:{{ ::contact.email }}" title="Send email to {{ ::contact.email }}">{{ ::contact.email }}</a>
           </p>
