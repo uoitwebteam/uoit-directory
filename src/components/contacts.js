@@ -68,7 +68,7 @@ export const CONTACTS_LIST = [{
 	category: 'Student services',
 	items: [{
 		name: 'Alumni Office',
-		phone: '905.721.8668 ext. 5659'
+    	email: 'alumni@ontariotechu.ca'
 	}, {
 		name: 'Career Centre',
 		phone: '905.721.8668 ext. 3824'
