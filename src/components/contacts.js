@@ -1,18 +1,18 @@
 export const CONTACTS_LIST = [{
 	category: 'Campus services',
 	items: [{
-    name: 'Admissions',
-    email: 'admissions@ontariotechu.ca'
-  }, {
-    name: 'Advancement',
-    email: 'advancement@ontariotechu.ca'
-  }, {
-    name: 'Alumni',
-    email: 'alumni@ontariotechu.ca'
-  }, {
+		name: 'Admissions',
+		email: 'admissions@ontariotechu.ca'
+	}, {
+		name: 'Advancement',
+		email: 'advancement@ontariotechu.ca'
+	}, {
+		name: 'Alumni',
+		email: 'alumni@ontariotechu.ca'
+	}, {
 		name: 'Bookstore',
-    phone: '905-721-8668 ext. 5413',
-    email: 'ontariotechu@bkstr.com'
+		phone: '905-721-8668 ext. 5413',
+		email: 'ontariotechu@bkstr.com'
 	}, {
 		name: 'Campus Fieldhouse',
 		phone: '905.721.3122'
@@ -23,43 +23,43 @@ export const CONTACTS_LIST = [{
 		name: 'Campus Recreation and Wellness Centre',
 		phone: '905.721.3040'
 	}, {
-    name: 'Centre of Institutional Quality Enhancement (CIQE)',
-    email: 'ciqe@ontariotechu.ca'
-  }, {
+		name: 'Centre of Institutional Quality Enhancement (CIQE)',
+		email: 'ciqe@ontariotechu.ca'
+	}, {
 		name: 'Health and Wellness',
 		phone: '905.721.3037'
 	}, {
-    name: 'International',
-    email: 'international@ontariotechu.ca'
-  }, {
+		name: 'International',
+		email: 'international@ontariotechu.ca'
+	}, {
 		name: 'Help Desk (Facilities, IT and Media services)',
 		phone: '905.721.3333'
 	}, {
-    name: 'Indigenous Education and Cultural Services',
-    email: 'indigenous@ontariotechu.ca'
-  }, {
-    name: 'IT Services',
-    email: 'servicedesk@dc-uoit.ca'
-  }, {
-		name: 'Library',
-    phone: '905.721.8668 ext. 2214',
-    email: 'library@ontariotechu.ca'
+		name: 'Indigenous Education and Cultural Services',
+		email: 'indigenous@ontariotechu.ca'
 	}, {
-    name: 'Office of Institutional Research and Analysis',
-    email: 'oira@ontariotechu.ca'
-  }, {
-    name: 'Parking',
-    email: 'parking@dc-uoit.ca'
-  }, {
+		name: 'IT Services',
+		email: 'servicedesk@dc-uoit.ca'
+	}, {
+		name: 'Library',
+		phone: '905.721.8668 ext. 2214',
+		email: 'library@ontariotechu.ca'
+	}, {
+		name: 'Office of Institutional Research and Analysis',
+		email: 'oira@ontariotechu.ca'
+	}, {
+		name: 'Parking',
+		email: 'parking@dc-uoit.ca'
+	}, {
 		name: 'Regent Theatre',
 		phone: '905.721.3399'
 	}, {
-    name: 'Residence Services',
-    email: 'info@dc-otresidence.ca'
-  }, {
+		name: 'Residence Services',
+		email: 'info@dc-otresidence.ca'
+	}, {
 		name: 'Security',
-    phone: '905.721.8668 ext. 2400',
-    email: 'security@dc-uoit.ca'
+		phone: '905.721.8668 ext. 2400',
+		email: 'security@dc-uoit.ca'
 	}, {
 		name: 'Shop61',
 		phone: '905.721.8668 ext. 5695'
@@ -68,7 +68,7 @@ export const CONTACTS_LIST = [{
 	category: 'Student services',
 	items: [{
 		name: 'Alumni Office',
-    	email: 'alumni@ontariotechu.ca'
+		email: 'alumni@ontariotechu.ca'
 	}, {
 		name: 'Career Centre',
 		phone: '905.721.8668 ext. 3824'
@@ -79,15 +79,15 @@ export const CONTACTS_LIST = [{
 		name: 'Flex Centre',
 		phone: '905.721.8668 ext. 3715'
 	}, {
-    name: 'General',
-    email: 'connect@ontariotechu.ca',
-  }, {
+		name: 'General',
+		email: 'connect@ontariotechu.ca',
+	}, {
 		name: 'Housing',
 		phone: '905.721.8668 ext. 8000'
 	}, {
-    name: 'International Student Services',
-    email: 'iss@ontariotechu.ca'
-  }, {
+		name: 'International Student Services',
+		email: 'iss@ontariotechu.ca'
+	}, {
 		name: 'Pharmacy',
 		phone: '905.728.6724'
 	}, {
@@ -95,8 +95,8 @@ export const CONTACTS_LIST = [{
 		phone: '905.721.3190'
 	}, {
 		name: 'Student Accessibility Services',
-    phone: '905.721.3266',
-    email: 'studentaccessibility@ontariotechu.ca'
+		phone: '905.721.3266',
+		email: 'studentaccessibility@ontariotechu.ca'
 	}, {
 		name: 'Ontario Tech Student Union',
 		email: 'otsu@ontariotechu.ca'
@@ -108,11 +108,11 @@ export const CONTACTS_LIST = [{
 		phone: '905.721.8668 ext. 3837'
 	}, {
 		name: 'Student Learning Centre',
-    phone: '905.721.8668 ext. 6578',
-    email: 'studentlearning@ontariotechu.ca'
+		phone: '905.721.8668 ext. 6578',
+		email: 'studentlearning@ontariotechu.ca'
 	}, {
 		name: 'Student Life',
-        email: 'studentlife@ontariotechu.ca'
+		email: 'studentlife@ontariotechu.ca'
 	}, {
 		name: 'Student Mental Health Services',
 		phone: '905.721.3392'
@@ -142,8 +142,7 @@ export const CONTACTS_LIST = [{
 		phone: '905.721.8668 ext. 3234'
 	}, {
 		name: 'School of Graduate and Postdoctoral Studies',
-    phone: '905.721.8668 ext. 6209',
-    email: 'gradstudies@ontariotechu.ca'
+		website: 'https://gradstudies.ontariotechu.ca/'
 	}]
 }, {
 	category: 'Faculty and staff services',

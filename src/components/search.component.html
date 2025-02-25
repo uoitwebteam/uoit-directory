@@ -59,6 +59,9 @@
           <p class="contact-email" ng-if="contact.email"><span class="icon_mail"></span> &nbsp;<a
               href="mailto:{{ ::contact.email }}" title="Send email to {{ ::contact.email }}">{{ ::contact.email }}</a>
           </p>
+          <p class="contact-website" ng-if="contact.website"><span class="icon_language"></span> &nbsp;<a
+              href="{{ ::contact.website }}" title="Visit website" target="_blank">Visit Website</a>
+          </p>
         </span>
       </div>
     </div>
