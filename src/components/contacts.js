@@ -111,8 +111,8 @@ export const CONTACTS_LIST = [{
 		phone: '905.721.8668 ext. 6578',
 		email: 'studentlearning@ontariotechu.ca'
 	}, {
-		name: 'Student Life',
-		email: 'studentlife@ontariotechu.ca'
+		name: 'Student Services',
+		email: 'StudentServices@ontariotechu.ca'
 	}, {
 		name: 'Student Mental Health Services',
 		phone: '905.721.3392'
